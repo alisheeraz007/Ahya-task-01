@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: poppins;
+    src: url(./assets/fonts/poppins/Poppins-Regular.ttf);
+}
+
+*{
+  padding: 0px;
+  margin: 0px;
+  font-family: poppins;
+}
+
+.navLinks a{
+    border-left: 5px solid transparent;
+}
+
+.navLinks .active{
+    color: #3a388b;
+    background-color: #f3f6ff;
+    border-left: 5px solid #3a388b;
+}
+
+.navLinks .active svg path{
+    fill: #3a388b;
+}
+
+.analyticsCard, .userTable, .dropdownProfile{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
