@@ -1,7 +1,10 @@
+import Layout from "./layout/Layout.jsx";
+import UserRoutes from "./routes/UserRoutes";
+
 export default function App() {
   return (
-    <h1 className="">
-      
-    </h1>
+    <Layout>
+      <UserRoutes />
+    </Layout>
   );
 }
