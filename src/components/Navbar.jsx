@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import NotificationICon from '../assets/icons/notificationIcon.svg'
 import userAvatar from '../assets/images/userAvatar.svg'
+import hamburuger from '../assets/icons/hamburuger.svg'
 
 const SearchIcon = () => (
     <svg
@@ -36,23 +37,35 @@ function Navbar() {
         }
     }, [])
 
+    const handleSideBar = () => {
+        document.getElementById("overlay").style.left = "0vw"
+        setTimeout(()=>(
+            document.getElementById("sideBar").style.left = "0px"
+        ),200)
+    }
+
     return (
         <nav className='px-[20px] py-[10px] border-b-[1px] border-[#d3d3d3a6] sticky top-0'>
             <div className='w-full flex justify-between items-center'>
-                <div className='inputDiv flex items-center w-[400px] h-[30px] bg-[#f3f4f6] gap-x-[10px] px-[20px] rounded-[5px]'>
+                <div className='block md:hidden'>
+                    <button onClick={handleSideBar}>
+                        <img src={hamburuger} />
+                    </button>
+                </div>
+                <div className='inputDiv flex items-center hidden md:block md:w-[50%] lg:w-[400px] h-[30px] bg-[#f3f4f6] gap-x-[10px] px-[20px] rounded-[5px]'>
                     <label htmlFor='search'>
                         <SearchIcon />
                     </label>
                     <input id='search' type='text' placeholder='Explore datasets...' className='border-none outline-0 bg-transparent' />
                 </div>
                 <div className='flex items-center justify-between'>
-                    <div className='flex gap-x-[20px]'>
+                    <div className='flex items-center gap-x-[20px]'>
                         <button className='bg-transparent cursor-pointer hover:bg-[#f3f4f6] transition border-0 outline-0 rounded-full w-[30px] h-[30px] flex items-center justify-center'>
                             <img src={NotificationICon} />
                         </button>
-                        <div className='border-r-[1] border-[#f3f4f6] h-[30px] w-[1px]'></div>
+                        <div className='border-r-[1px] bg-[#f3f4f6] h-[30px] w-[1px]'></div>
                         <div onClick={() => setOpen(!open)} className='cursor-pointer relative flex gap-x-[10px] items-center'>
-                            <div>
+                            <div className='hidden md:block'>
                                 <h3 className='text-[14px] font-[600]'>Muhammad Ali</h3>
                                 <h4 className='text-[12px] font-[300] text-[gray] text-right'>React.js Dev</h4>
                             </div>

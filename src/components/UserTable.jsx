@@ -40,10 +40,10 @@ function UserTable({ data }) {
             <tbody>
 
                 <tr className='bg-[#d3d3d34a]'>
-                    <th onClick={() => handleSort('name')} className='cursor-pointer w-[35%] p-[20px] px-[30px]'>User</th>
-                    <th onClick={() => handleSort('status')} className='cursor-pointer w-[19%] p-[20px] px-[30px]'>Status</th>
-                    <th onClick={() => handleSort('lastActive')} className='cursor-pointer w-[23%] p-[20px] px-[30px]'>Last Active</th>
-                    <th onClick={() => handleSort('revenue')} className='cursor-pointer text-right w-[23%] p-[20px] px-[30px]'>Revenue</th>
+                    <th onClick={() => handleSort('name')} className='cursor-pointer min-w-[300px] lg:w-[35%] p-[20px] px-[30px]'>User</th>
+                    <th onClick={() => handleSort('status')} className='cursor-pointer min-w-[100px] lg:w-[19%] p-[20px] px-[30px]'>Status</th>
+                    <th onClick={() => handleSort('lastActive')} className='cursor-pointer min-w-[150px] lg:w-[23%] p-[20px] px-[30px]'>Last Active</th>
+                    <th onClick={() => handleSort('revenue')} className='cursor-pointer min-w-[200px] text-right lg:w-[23%] p-[20px] px-[30px]'>Revenue</th>
                 </tr>
 
                 {sortedData.map((user, i) => (

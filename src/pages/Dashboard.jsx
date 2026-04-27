@@ -88,19 +88,19 @@ function Dashboard() {
   ])
 
   return (
-    <main className='p-[30px]'>
-      <div className='flex justify-between items-end'>
+    <main className='p-[30px] w-[100%] overflow-hidden'>
+      <div className='flex flex-col lg:flex-row justify-between lg:items-end'>
         <div>
-          <h1>Executive Summary</h1>
+          <h1 className='text-[32px] font-[600]'>Executive Summary</h1>
           <p className='text-[gray]'>Deep dive into this month's curated performance metrics.</p>
         </div>
-        <div className='flex gap-x-[10px]'>
+        <div className='flex gap-x-[10px] mt-[10px] lg:mt-0'>
           <ButtonOutline icon={<CalendarIcon />} text="Last 30 Days" />
           <ButtonPrimary icon={<DownloadIcon />} text="Export" />
         </div>
       </div>
 
-      <div className='flex gap-[20px] w-full mt-[40px]'>
+      <div className='flex flex-wrap lg:flex-nowrap gap-[20px] w-full mt-[40px]'>
         <AnalyticsCard icon={card1Icon} percent="12.5%" nagative={false} label="Total Revenue" count="$45,231.00" />
         <AnalyticsCard icon={card2Icon} percent="8.2%" nagative={false} label="Active Users" count="12,842" />
         <AnalyticsCard icon={card3Icon} percent="1.4%" nagative={true} label="Conversion Rate" count="3.4%" />
@@ -109,7 +109,7 @@ function Dashboard() {
       <div className='mt-[40px]'>
         <h3>Recent Transactions</h3>
 
-        <div className='mt-[20px] w-full'>
+        <div className='mt-[20px] w-[100%] overflow-x-scroll '>
           <UserTable data={usersData} />
         </div>
       </div>
