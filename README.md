@@ -1,16 +1,16 @@
-# React + Vite
+# Setup instruction
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. Download or clone via git repository.
+2. Extract (if downloaded) and open the folder.
+3. Now open that folder in terminal.
+4. Run npm i or npx yarn command in terminal
+5. After successfull intalling of dependies run pm run dev in terminal
+6. Your project will be open locally with the checking url of http://localhost:5173/
 
-Currently, two official plugins are available:
+# Reasoning
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+I used tailwind as it is a preload sass css with load before the page render and it too easy for the developer to make a site or software responsive.
 
-## React Compiler
+# Rough Time Spend
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+I spend 3 hour in this dashboard layout as I made it for easy use in future, the main thing for me is the structure, as I made this structure in that way that I can made other pages in just 20 to 25 minutes easily.
