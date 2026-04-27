@@ -9,7 +9,7 @@ function AnalyticsCard(props) {
             </div>
             <div className='mt-[20px]'>
                 <h4 className='font-[400] text-[gray]'>{props.label}</h4>
-                <h2 className='text-[28px] mt-[3px]'>{props.count}</h2>
+                <h2 className='text-[28px] mt-[3px] font-[600]'>{props.count}</h2>
             </div>
         </div>
     )
