@@ -52,7 +52,7 @@ function Navbar() {
                         <img src={hamburuger} />
                     </button>
                 </div>
-                <div className='inputDiv flex items-center hidden md:block md:w-[50%] lg:w-[400px] h-[30px] bg-[#f3f4f6] gap-x-[10px] px-[20px] rounded-[5px]'>
+                <div className='inputDiv items-center hidden md:flex md:w-[50%] lg:w-[400px] h-[30px] bg-[#f3f4f6] gap-x-[10px] px-[20px] rounded-[5px]'>
                     <label htmlFor='search'>
                         <SearchIcon />
                     </label>
