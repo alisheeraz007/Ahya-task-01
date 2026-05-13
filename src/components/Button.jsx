@@ -14,6 +14,7 @@ const StyledButton = styled.button`
   align-items: center;
   justify-content: center;
   gap: 8px;
+  height: 100%;
 
   ${({ size }) => {
         if (size === "sm") return "padding: 6px 12px; font-size: 12px;";
@@ -26,12 +27,10 @@ const StyledButton = styled.button`
         switch (variant) {
             case "secondary":
                 return "background: #eee; color: #333;";
-            case "ghost":
+            case "outline":
                 return "background: transparent; border: 1px solid #ccc;";
             case "danger":
                 return "background: #ff4d4f; color: white;";
-            case "outline":
-                return "background: #fff; color: #3a388b; border: 1px solid #3a388b";
             default:
                 return "background: #3a388b; color: white;";
         }

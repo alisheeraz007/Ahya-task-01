@@ -89,6 +89,36 @@ function Demo() {
         </Button>
       </div>
 
+      <div style={{ display: "flex", gap: 10, marginTop: 20 }}>
+
+        <Button
+          variant="primary"
+          size="sm"
+        >
+          SM Primary
+        </Button>
+
+        <Button
+          variant="secondary"
+          size="md"
+        >
+          MD Secondary
+        </Button>
+
+        <Button
+          variant="danger"
+          size="lg"
+        >
+          LG Danger
+        </Button>
+
+         <Button
+          variant="outline"
+        >
+          default outline
+        </Button>
+      </div>
+
       <Modal
         open={modalOpen}
         onClose={() => setModalOpen(false)}

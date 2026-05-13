@@ -75,7 +75,7 @@ export default function Users() {
     email: "",
     phone: "",
     tags: [],
-    range: [20, 80],
+    range: [25, 25],
     notifications: false,
   });
 
