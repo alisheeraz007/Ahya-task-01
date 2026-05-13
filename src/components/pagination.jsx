@@ -1,3 +1,5 @@
+import ButtonOutline from "./ButtonOutline";
+
 export default function Pagination({
     totalItems,
     itemsPerPage,
@@ -49,13 +51,11 @@ export default function Pagination({
 
     return (
         <div className="flex items-center justify-center gap-2 mt-10 flex-wrap">
-            <button
+            <ButtonOutline
                 onClick={handlePrev}
                 disabled={currentPage === 0}
-                className="px-3 py-1 border rounded disabled:opacity-50"
-            >
-                Prev
-            </button>
+                text="Prev"
+            />
 
             {getPages().map((page, i) =>
                 page === "..." ? (
@@ -66,22 +66,19 @@ export default function Pagination({
                     <button
                         key={i}
                         onClick={() => handlePageChange(page)}
-                        className={`px-3 py-1 border rounded ${
-                            currentPage === page ? "bg-blue-500 text-white" : ""
-                        }`}
+                        className={`px-3 py-1 border rounded ${currentPage === page ? "bg-blue-500 text-white" : ""
+                            }`}
                     >
                         {page + 1}
                     </button>
                 )
             )}
 
-            <button
+            <ButtonOutline
                 onClick={handleNext}
                 disabled={currentPage === totalPages - 1}
-                className="px-3 py-1 border rounded disabled:opacity-50"
-            >
-                Next
-            </button>
+                text="Next"
+            />
         </div>
     );
 }
