@@ -20,8 +20,8 @@ let routes = [
         )
     },
     {
-        lable: "Analytics",
-        link: "/analytics",
+        lable: "Products",
+        link: "/products",
         icon: (active) => (
             <AnalyticsIcon
                 color={active ? "#fff" : "gray"}
