@@ -31,8 +31,8 @@ let routes = [
         )
     },
     {
-        lable: "Reports",
-        link: "/reports",
+        lable: "Components",
+        link: "/components",
         icon: (active) => (
             <ReportsIcon
                 color={active ? "#fff" : "gray"}

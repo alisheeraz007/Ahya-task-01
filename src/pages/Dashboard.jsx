@@ -12,6 +12,7 @@ import user1 from '../assets/images/User.png'
 import user2 from '../assets/images/User-1.png'
 import user3 from '../assets/images/User-2.png'
 import user4 from '../assets/images/User-3.png'
+import Button from '../components/Button';
 
 const CalendarIcon = () => (
   <svg
@@ -95,8 +96,12 @@ function Dashboard() {
           <p className='text-[gray]'>Deep dive into this month's curated performance metrics.</p>
         </div>
         <div className='flex gap-x-[10px] mt-[10px] lg:mt-0'>
-          <ButtonOutline icon={<CalendarIcon />} text="Last 30 Days" />
-          <ButtonPrimary icon={<DownloadIcon />} text="Export" />
+          <Button icon={<CalendarIcon />} variant="outline">
+            Last 30 days
+          </Button>
+          <Button icon={<DownloadIcon />} text="Export" variant="primary">
+            Export
+          </Button>
         </div>
       </div>
 

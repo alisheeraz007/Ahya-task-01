@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react'
 import Pagination from '../components/pagination'
 import axios from 'axios'
 import ButtonPrimary from '../components/ButtonPrimary'
+import Button from '../components/Button'
 
 function Products() {
     let [products, setProducts] = useState([])
@@ -80,7 +81,9 @@ function Products() {
                             <h2 className="text-[20px] font-bold text-center">{item.title}</h2>
                             <p className="text-[18px] font-bold text-center mt-[10px]">{item.price}</p>
                             <div className="mt-[20px] flex justify-center">
-                                <ButtonPrimary text="Buy Now" />
+                                <Button variant="primary" size="md">
+                                    Buy Now
+                                </Button>
                             </div>
                             <div className="flex flex-wrap gap-[10px] mt-[20px]">
                                 {item?.tags?.map((tag, j) => (
